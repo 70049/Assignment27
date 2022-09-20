@@ -1,0 +1,79 @@
+Q1.   Write a python script to create a ArithmeticError.
+Ans.   a=int(input("Enter a number: "))
+       b=int(input("Enter second number: "))
+       c=0
+       try:
+         c=a/b
+         if a==b:
+            raise ArithmeticError
+        except Exception:
+            print("Make Sure! Enter the correct Number")
+        else:
+            print(c)
+            
+Q2.   Write a pyhon script to create a Value error.
+Ans.   a=int(input("Enter a number: "))
+       b=int(input("Enter second number: "))
+       c=0
+       try:
+         c=a/b
+       except Exception:
+           print("Enter a Number,Not a String")
+       else:
+          print(c)
+          
+Q3.   Write a python script to handle the Arithmetic Error.
+Ans.   a=int(input("Enter a number: "))
+       b=int(input("Enter second number: "))
+       c=0
+       try:
+          c=a/b
+          if a==b:
+              raise ArithmeticError
+       except ArithmeticError:
+             print("Entered Number must be Different to Divide")
+       else:
+          print(c)
+          
+Q4.   Write a python script to handle the value error.
+Ans.   a=int(input("Enter a number: "))
+       b=int(input("Enter second number: "))
+       c=0
+       try:
+         a+b
+       except VAlueError:
+          print("Enter a number: ")
+       else:
+          print(c)
+          
+Q5.   Write a python script to handle the multiple exception in one try.
+Ans.   a=int(input("Enter a number: "))
+       b=int(input("Enter second number: "))
+       c=0
+       try:
+         c=a/b
+         if a==b:
+            raise ArithmeticError
+       except ValueError:
+            print("Enter a number!Not a string: "))
+       except ArithmeticError:
+            print("Make Sure! Entered Number must be Different to divide: "))
+       except ZeroDivisionError:
+            print("Can't Divide with Zero!")
+       else:
+          print(c)
+          
+Q6.   Write a python script to create a calculator with 4 basis operations,and handle a maximum number of exceptions.
+Ans.   a=int(input("Enter a number:" ))
+       b=int(input("Enter second number: "))
+       c=0
+       try:
+         c=a+b
+         c=a-b
+         c=a/b
+         c=a*b
+       except ValueError:
+           print("Enter a number,Not a string!")
+           
+          
+             
