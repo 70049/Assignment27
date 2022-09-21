@@ -64,16 +64,178 @@ Ans.   a=int(input("Enter a number: "))
           print(c)
           
 Q6.   Write a python script to create a calculator with 4 basis operations,and handle a maximum number of exceptions.
-Ans.   a=int(input("Enter a number:" ))
-       b=int(input("Enter second number: "))
-       c=0
-       try:
-         c=a+b
-         c=a-b
-         c=a/b
-         c=a*b
-       except ValueError:
-           print("Enter a number,Not a string!")
-           
-          
+Ans.  while (True):
+             print("\n\n\t\t ~CALCULATOR~")
+             print("\n\t 1. Add")
+             print("\n\t 2. Substract")
+             print("\n\t 3. Multiplication")
+             print("\n\t 4. Division\n")
+             a=int(input("Enter Your Choice:  "))
+             match a:
+                 case 1:
+                    try:
+                       a=int(input("Enter first Number: "))
+                       b=int(input("Enter Second Number: "))
+                       c=0
+                       c=a+b
+                    except ValueError:
+                       print("Enter any number.Not a string!")
+                    else:
+                      print("\n\tResult Is:-",c)
+                case 2:
+                    try:
+                      a=int(input("Enter First Number: "))
+                      b=int(input("Enter Second Number: "))
+                      c=0
+                      c=a-b
+                    except ValueError:
+                      print("Enter Number Not String!")
+                    else:
+                      print("\n\tResult IS:-",c)
+               case 3:
+                   try:
+                     a=int(input("Enter First number: "))
+                     b=int(input("Enter Second Number: "))
+                     c=0
+                     c=a*b
+                   except ValueError:
+                     print("Enter Number not String!")
+                   else:
+                     print("\n\tResult Is:-",c)
+               case 4:
+                   try:
+                     a=int(input("Enter First number:  "))
+                     b=int(input("Enter Second Number: "))
+                     c=0
+                     c=a/b
+                     if a==b:
+                          raise ArithmeticError
+                   except ArithmeticError:
+                       print("Number Can't be Same")
+                   except  ValueError:
+                      print("Enter Number Yaar!")
+                   else:
+                      print("\n\tResult:- ",c)
+
+Q7.   Write a python script to add a finally block in above Question.
+Ans.     while (True):
+             print("\n\n\t\t ~CALCULATOR~")
+             print("\n\t 1. Add")
+             print("\n\t 2. Substract")
+             print("\n\t 3. Multiplication")
+             print("\n\t 4. Division\n")
+             a=int(input("Enter Your Choice:  "))
+             match a:
+                 case 1:
+                    try:
+                       a=int(input("Enter first Number: "))
+                       b=int(input("Enter Second Number: "))
+                       c=0
+                       c=a+b
+                    except ValueError:
+                       print("Enter any number.Not a string!")
+                    else:
+                      print("\n\tResult Is:-",c)
+                    finally:
+                      print("\n\t Thanks For use me!")
+                case 2:
+                    try:
+                      a=int(input("Enter First Number: "))
+                      b=int(input("Enter Second Number: "))
+                      c=0
+                      c=a-b
+                    except ValueError:
+                      print("Enter Number Not String!")
+                    else:
+                      print("\n\tResult IS:-",c)
+                    finally:
+                      print("\n\t Thanks for Use Me!")
+               case 3:
+                   try:
+                     a=int(input("Enter First number: "))
+                     b=int(input("Enter Second Number: "))
+                     c=0
+                     c=a*b
+                   except ValueError:
+                     print("Enter Number not String!")
+                   else:
+                     print("\n\tResult Is:-",c)
+                   finally:
+                     print("\n\t Thanks For Use Me!")
+               case 4:
+                   try:
+                     a=int(input("Enter First number:  "))
+                     b=int(input("Enter Second Number: "))
+                     c=0
+                     c=a/b
+                     if a==b:
+                          raise ArithmeticError
+                   except ArithmeticError:
+                       print("Number Can't be Same")
+                   except  ValueError:
+                      print("Enter Number Yaar!")
+                   else:
+                      print("\n\tResult:- ",c)
+                   finally:
+                      print("\n\tThanks For Use me!")
+                      
+Q8.  Write a python script to implement try except and finally for Division.
+Ans.    print("Division")
+        a=int(input("Enter First Number: "))
+        b=int(input("Enter Second Number: "))
+        c=0
+        try:
+           c=a/b
+           if a==b:
+              raise ArithmeticError
+        except ValueError:
+            print("Enter Number Not a String!")
+        except ArithmeticError:
+            print("Please Enter Number Differently\n Number Can't be Same To Divide!")
+        except ZeroDivisionalError:
+            print("Zero Can't Divided")
+        except Exception:
+            print("Input Some Valid Value!")
+        else:
+            print("Result Is:-",c)
+        finally:
+            print("Have a Good Day!~~")
+            
+Q9.   Write  a python script ot raise a Value Error.
+Ans.    print("To Calculate the Average:")
+        a=int(input("Enter First Number: "))
+        b=int(input("Enter Secod Number: "))
+        c=int(input("Enter Third Number: "))
+        try:
+             d=a+b+c/3
+             if a>='a' and a<='z' and b>='a' and b<='z' and c>='a' and c<='z':
+                  raise ValueError
+        except valueError:
+             print("Enter the number not String:")
+        except Exception:
+             print("Enter any right Value:")
+        else:
+             print(c)
+        finally:
+             print("Good Job!")
              
+Q10.  Write  a python script to Implement the Nested try except Block.
+Ans.    a=int(input("Enter a number: "))
+        b=int(input("Enter Second Number: "))
+        c=0
+        try:
+          c=a+b
+          try:
+            c=a-b
+          except Exception:
+            print("Enter Correct Number: ")
+          else:
+            print(c)
+        except Exception:
+            print("Enter Valid Input")
+        else:
+            print(c)
+        finally:
+            print("Good Luck")
+                  
+            
